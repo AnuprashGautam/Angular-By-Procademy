@@ -1,0 +1,29 @@
+<div class="card" *ngFor="let prod of products">
+  <div class="card__image">
+    <img [src]="prod.image" alt="product image" />
+
+    <div class="product__discount" *ngIf="prod['discount-price']">
+        {{ (100 - (prod['discount-price'] / prod.price * 100)).toFixed(0) }}% off
+    </div>
+  </div>
+
+  <div class="card__details">
+    <h2>{{ prod.title }}</h2>
+    <hr />
+    <p>{{ "Category: " + prod.category }}</p>
+    <p>{{ "Price: $" + prod.price }}</p>
+
+    <div>
+      <button
+        (click)="incrementCartValue(prod.id)"
+        [disabled]="addToCart == prod.instock"
+      >
+        +
+      </button>
+      <span>{{ addToCart }}</span>
+      <button (click)="decrementCartValue()" [disabled]="addToCart == 0">
+        -
+      </button>
+    </div>
+  </div>
+</div>
