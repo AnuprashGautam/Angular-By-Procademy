@@ -1,0 +1,23 @@
+<div class="search-container">
+  <div class="biome__search-bar">
+    <div>
+      <select>
+        <option *ngFor="let category of listOfCategories" [value]="category">
+          {{category}}
+        </option>
+      </select>
+
+      <!-- <input type="text" placeholder="Search" [value]="searchText" (input)="updateSearchText($event)"/> -->
+      <input type="text" placeholder="Search" #searchInput/>
+
+      <button class="btn " (click)="updateSearchText(searchInput)">
+          <img src="assets/icons/search-icon.svg" alt="search icon"/>
+      </button>
+
+    </div>
+  </div>
+
+  <div class="search-result">
+    <p *ngIf="searchText != ''"><strong>Search result for: </strong>{{ searchText }}</p>
+  </div>
+</div>

@@ -1,0 +1,4 @@
+<div class="container">
+  <app-search (searchTextChanged)="setSearchText($event)"></app-search>
+  <product-list [searchText]="searchText"></product-list>
+</div>
