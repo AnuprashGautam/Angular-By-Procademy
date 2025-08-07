@@ -1,0 +1,19 @@
+<div class="products section">
+    <div class="products__title section__title">
+        <h1>Products</h1>
+    </div>
+
+    <div class="products__content section__content">
+        <app-filter 
+        [all]="totalProductCount" 
+        [inStock]="totalInstockProductCount" 
+        [outOfStock]="totalOutofstockProductCount"
+        (selectedFilterButtonChanged)="onFilterChanged($event)"></app-filter>
+        
+        <div class="products__aria">
+            <div *ngFor="let prod of products">
+                <app-product  [product]="prod" *ngIf="selectedFilterButton === 'all' || prod.instock.toString() === selectedFilterButton"></app-product>
+            </div>
+        </div>
+    </div>
+</div>
