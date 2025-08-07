@@ -1,0 +1,13 @@
+<div class="products section">
+    <div class="products__title section__title">
+        <h1>Products</h1>
+    </div>
+
+    <div class="products__content section__content">
+        <app-filter [all]="totalProductCount" [inStock]="totalInstockProductCount" [outOfStock]="totalOutofstockProductCount"></app-filter>
+        
+        <div class="products__aria">
+            <app-product *ngFor="let prod of products" [product]="prod"></app-product>
+        </div>
+    </div>
+</div>
