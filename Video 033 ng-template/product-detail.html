@@ -1,0 +1,6 @@
+<div class="ekart-product-detail-addtoCart">
+    <button class="btn-add-to-cart" *ngIf="product.inStock; else notifyMe">ADD TO CART</button>
+    <ng-template #notifyMe>
+      <button class="btn-add-to-cart" >Notify Me</button>
+    </ng-template>
+</div>
