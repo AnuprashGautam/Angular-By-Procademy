@@ -1,0 +1,7 @@
+<div class="products__aria">
+    <ng-container *ngFor="let prod of products" >
+        <ng-container *ngIf="selectedFilterButton === 'all' || prod.inStock.toString() === selectedFilterButton">
+        <app-product (click)="selectedProduct=prod" *ngIf="searchText==='' || prod.title.toLowerCase().includes(searchText)" [product]="prod"></app-product>
+        </ng-container>
+    </ng-container>
+</div>
