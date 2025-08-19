@@ -1,0 +1,20 @@
+<div class="parent-card">
+  <h1>This is the parent component.</h1>
+
+  <app-child>
+    <h1 class="title" >I am child component.</h1>
+    <p class="description" #para>Aorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laudantium sed libero! Ab vel doloribus, nostrum velit iusto voluptates tempora.</p>
+   
+    <p class="description" #para>Borem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laudantium sed libero! Ab vel doloribus, nostrum velit iusto voluptates tempora.</p>
+    
+    <p class="description" #para>Corem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur laudantium sed libero! Ab vel doloribus, nostrum velit iusto voluptates tempora.</p>
+    
+    <app-test [name]="'Sarah Williams'"></app-test>
+    <app-test [name]="'Donald Trump'"></app-test>
+    <app-test [name]="'Nicola Tesla'"></app-test>
+    <app-test [name]="'John Smith'"></app-test>
+    
+  </app-child>
+
+  <button (click)="showParentDetails()">Show Parent Details</button>
+</div>

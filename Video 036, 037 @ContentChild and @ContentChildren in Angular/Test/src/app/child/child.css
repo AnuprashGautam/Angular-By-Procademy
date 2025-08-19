@@ -1,0 +1,13 @@
+.child-card
+{
+    width: 80%;
+    padding: 10px;
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin:auto auto;
+    border-radius: 20px;
+}
