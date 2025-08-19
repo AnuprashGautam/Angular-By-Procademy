@@ -1,0 +1,17 @@
+.input-container{
+    padding: 20px;
+    width: 600px;
+    margin: 200px auto;
+
+    border: 1px solid black;
+    border-radius: 20px;
+    background-color: #fafafa;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container input, 
+.input-container button{
+    height: 2rem;
+}
